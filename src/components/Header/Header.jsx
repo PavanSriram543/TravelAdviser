@@ -4,7 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Autocomplete } from "@react-google-maps/api";
 import useStyles from "./styles";
 
-const Header = () => {
+const Header = ({ onLoad, onPlaceChanged }) => {
   const classes = useStyles();
   return (
     <AppBar position="static">
@@ -12,7 +12,7 @@ const Header = () => {
         <Typography variant="h5" className={classes.title}>
           Travel Advisor
         </Typography>
-        <Box style={{ display: "flex" }}>
+        <Box sx={{ display: "flex" }}>
           <Typography variant="h6" className={classes.title}>
             Explore new places
           </Typography>
